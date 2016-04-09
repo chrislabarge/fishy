@@ -1,34 +1,60 @@
-<p id="notice"><%= notice %></p>
 
-<h1>Listing Lights</h1>
+<style>
+  .background-dark {
+    background: #1b0523;
+  }
 
-<table>
-  <thead>
-    <tr>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+  .btn-lg {
+    width: 100%;
+  }
 
-  <tbody>
-    <% @lights.each do |light| %>
-      <tr>
-        <td><%= link_to 'Show', light %></td>
-        <td><%= link_to 'Edit', edit_light_path(light) %></td>
-        <td><%= link_to 'Destroy', light, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+  .content {
+    margin-top: 75px;
+  }
+</style>
+<div class="container background-dark">
+  <div class="row">
+    <div class="col-xs-12 text-center content">
+      <p id="notice"><%= notice %></p>
 
-<br>
+      <!-- <table>
+        <thead>
+          <tr>
+            <th colspan="3"></th>
+          </tr>
+        </thead>
 
-<%= link_to 'White', new_light_path(light: "white") %>
-<br>
-<%= link_to 'Blue', new_light_path(light: "blue") %>
-<br>
-<%= link_to 'Green', new_light_path(light: "green") %>
-<br>
-<%= link_to 'Red', new_light_path(light: "red") %>
-<br>
-<%= link_to 'Yellow', new_light_path(light: "red") %>
-<br>
+        <tbody>
+          <% @lights.each do |light| %>
+            <tr>
+              <td><%= link_to 'Show', light %></td>
+              <td><%= link_to 'Edit', edit_light_path(light) %></td>
+              <td><%= link_to 'Destroy', light, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+            </tr>
+          <% end %>
+        </tbody>
+      </table>
+       -->
+      <div class="light-color"> 
+        <%= link_to 'White', new_light_path(light: "white"), class: "btn btn-lg btn-default" %>
+      </div>
+      <br>
+      <div class="light-color"> 
+        <%= link_to 'Blue', new_light_path(light: "blue"), class: "btn btn-lg btn-primary" %>
+      </div>
+      <br>
+      <div class="light-color"> 
+        <%= link_to 'Green', new_light_path(light: "green"), class: "btn btn-lg btn-success" %>
+      </div>
+      <br>
+      <div class="light-color"> 
+        <%= link_to 'Red', new_light_path(light: "red"), class: "btn btn-lg btn-danger" %>
+      </div>
+      <br>
+      <div class="light-color"> 
+        <%= link_to 'Yellow', new_light_path(light: "yelloq"), class: "btn btn-lg btn-warning" %>
+      </div>
+      <br>
+    </div>
+  </div>
+</div>
